@@ -4,6 +4,7 @@
 
 앨런29기 진도에 맞춰, 각 주차별로 준비한 인터뷰 문제를 풀어보고, 질문합니다.
 
+<br>
 
 <details>
 <summary>컴퓨터 시스템에서 CPU의 주요 기능은 무엇입니까?</summary>
@@ -150,7 +151,7 @@
 
 
 <details>
-<summary>Swift의 폐쇄 범위 연산자(a...b)와 반개방 범위 연산자(a..<b)의 차이점을 설명하십시오.</summary>
+<summary> Swift의 폐쇄 범위 연산자와 반개방 범위 연산자의 차이점을 설명하십시오. </summary>
 
 ```swift
 //답변
