@@ -4,20 +4,12 @@
 ----- | ----- 
 
 
-**Organization**
+## Organization
+<br>
 - Alfie(윤진용)
 - Blu(김보미)
 - Nat(서현)
 - Lets(고석환)
-
-**Contact**
-
-- dbswlsdyd730@naver.com
-- 1
-- 2
-- 3
-
-
 
 ## [1주차](https://github.com/iOS-ZOMBIE/INTERVIEW/blob/main/FirstWeek.md)
 - 컴퓨터의 기본 구조와 동작(1강) ~ 함수의 기본 개념(28강)
