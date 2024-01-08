@@ -1,6 +1,6 @@
 # [iOS 🧟 ZOMBIE] iOS 인터뷰
 
- ![좀비사과 (2)](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/a46dbd9e-ac9d-4050-92e1-bec07a7514a4) | 스스로 설명할 수 있을 만큼의 인터뷰 능력을 기르는데 중점을 뒀습니다. | 
+ ![좀비사과 (2)](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/a46dbd9e-ac9d-4050-92e1-bec07a7514a4) | ![스스로](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/82129229-0287-49d7-bbca-6c9be1637287)| 
 ----- | ----- 
 
 
