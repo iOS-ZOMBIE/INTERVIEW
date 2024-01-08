@@ -4,11 +4,9 @@
 
 앨런29기 진도에 맞춰, 각 주차별로 준비한 인터뷰 문제를 풀어보고, 질문합니다.
 
-![좀비사과 (2)](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/2de59f0a-401d-4587-8400-1cde93bc7ea5) 
+항목 ![좀비사과 (2)](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/a46dbd9e-ac9d-4050-92e1-bec07a7514a4) | 스스로 설명할 수 있을 만큼의 인터뷰 능력을 기르는데 중점을 뒀습니다. | 
+----- | ----- 
 
-항목 ![좀비사과 (2)](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/a46dbd9e-ac9d-4050-92e1-bec07a7514a4) | 항목 2 | 항목 3
------ | ----- | -----
- | 추가할 | 수있다
 
 **Organization**
 
