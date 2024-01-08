@@ -4,7 +4,7 @@
 
 앨런29기 진도에 맞춰, 각 주차별로 준비한 인터뷰 문제를 풀어보고, 질문합니다.
 
-![좀비사과 (2).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3de099d9-93f3-4629-a573-b788330d4c5a/c6c57563-64b4-4a69-9417-f696aaf86281/%E1%84%8C%E1%85%A9%E1%86%B7%E1%84%87%E1%85%B5%E1%84%89%E1%85%A1%E1%84%80%E1%85%AA_(2).png)
+![좀비사과 (2)](https://github.com/iOS-ZOMBIE/INTERVIEW/assets/102133961/2de59f0a-401d-4587-8400-1cde93bc7ea5)  |  
 
 **Organization**
 
