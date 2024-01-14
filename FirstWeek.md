@@ -205,7 +205,7 @@ let rowHeight = contentHeight + (hasHeader ? 50 : 20)
 <summary>두 숫자의 곱셈을 계산하는 함수를 작성하십시오.</summary>
 
 ```swift
-func multipleTwoNums(_ param1: Int, _ param2: Int) -> Int {
+func multiplyTwoNums(_ param1: Int, _ param2: Int) -> Int {
     return param1 * param2
 }
 ```
