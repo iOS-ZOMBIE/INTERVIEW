@@ -143,16 +143,6 @@
 ```
 </details>
 
-
-<details>
-<summary>컴퓨터 시스템에서 CPU의 주요 기능은 무엇입니까?</summary>
-
-```swift
-//답변
-```
-</details>
-
-
 <details>
 <summary>Swift에서 삼항 연산자의 예를 작성하십시오.</summary>
 
