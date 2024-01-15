@@ -11,8 +11,8 @@
 - Nat(서현)
 - Lets(고석환)
 
-## [1주차](https://github.com/iOS-ZOMBIE/INTERVIEW/blob/main/FirstWeek.md)
+## [1주차](https://github.com/iOS-ZOMBIE/INTERVIEW/blob/Blu/FirstWeek.md)
 - 컴퓨터의 기본 구조와 동작(1강) ~ 함수의 기본 개념(28강)
 
-## [2주차](https://github.com/iOS-ZOMBIE/INTERVIEW/blob/main/SecondWeek.md)
+## [2주차](https://github.com/iOS-ZOMBIE/INTERVIEW/blob/Blu/SecondWeek.md)
 - 함수의 응용(29강) ~ 열거형의 unknown 키워드(59강)
