@@ -102,7 +102,7 @@ greet(person: ["name": "Nat", "location": "Cupertino"])
 <summary>튜플을 입력으로 받아 두 요소의 합을 반환하는 함수를 만듭니다.</summary>
 
 ```swift
-func operateTuples(_ inputTuples: (Int, Int)) -> Int {
+func calculateTuples(_ inputTuples: (Int, Int)) -> Int {
     return inputTuples.0 + inputTuples.1
 }
 ```
