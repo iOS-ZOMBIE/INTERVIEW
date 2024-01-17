@@ -30,7 +30,7 @@ func sumTwoNumbers(_ num1: Int, _ num2: Int) -> Int {
 <summary>주어진 숫자의 제곱을 반환하는 함수를 작성하십시오.</summary>
 
 ```swift
-func operateSquare(_ number: Double) -> Double {
+func calculateSquare(_ number: Double) -> Double {
     return number * numer
 }
 ```
@@ -59,7 +59,13 @@ func operateSquare(_ number: Double) -> Double {
 <summary>inout 매개변수를 사용하여 두 정수 값을 교환하는 함수를 작성하십시오.</summary>
 
 ```swift
-//답변
+var winner = "A"
+func change(winner: inout String, to: String) {
+    winner = to
+}
+print(winner)
+change(winner: &winner, to: "Nat")
+print(winner)
 ```
 </details>
 
@@ -68,7 +74,24 @@ func operateSquare(_ number: Double) -> Double {
 <summary>가드(guard) 문을 사용하여 옵셔널 문자열(String?)을 안전하게 래핑 해제하는 함수를 구현합니다.</summary>
 
 ```swift
-//답변
+func greet(person: [String: String]) {
+    guard let name = person["name"] else { return }
+    
+    print("Hello, \(name)!")
+    
+    guard let location = person["location"] else {
+        print("I hope the weather is nice near you.")
+        return
+    }
+    print("I hope the weather is nice in \(location).")
+}
+
+greet(person: ["name" : "Nat"])
+//Hello, Nat!
+//I hope the weather is nice near you.
+greet(person: ["name": "Nat", "location": "Cupertino"])
+//Hello, Nat!
+//I hope the weather is nice in Cupertino.
 ```
 </details>
 
@@ -106,7 +129,15 @@ print(isFactorial(5))
 <summary>Swift에서 print 기능의 적절한 사용법을 설명하십시오.</summary>
 
 ```swift
-//답변
+// 단순 문자열을 출력할 때는 print 를 사용하고, 인스턴스의 자세한 설명이 필요할 때는 dump 를 사용한다. 
+// 문자열 보간법을 사용해 문자열 내 변수 또는 상수 실질적인 값을 표현하기 위해 사용
+print(["cupertino": "LA", "gangNam": "Seoul"], 123, separator: "***", terminator: "\n")
+
+// ["gangNam": "Seoul", "cupertino": "LA"]***123-
+
+var num = 3.14
+print("π: \(num)")
+// π: 3.14
 ```
 </details>
 
