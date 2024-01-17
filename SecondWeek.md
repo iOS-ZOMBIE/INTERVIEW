@@ -10,14 +10,16 @@
 <summary>두 개의 정수를 입력으로 받아 그 합을 반환하는 함수를 작성하십시오.</summary>
 
 ```swift
-//답변
+func sumTwoNumbers(_ num1: Int, _ num2: Int) -> Int {
+    return num1 + num2
+}
 ```
 </details>
 
 
 <details>
 <summary>데이터는 RAM에 어떻게 저장됩니까?</summary>
-
+프로그램이 실행되면 해당 프로그램이 RAM 에 로드되며 프로그램은 코드와 데이터로 구성되어 있음. -> 프로그램이 실행되는 동안 필요한 데이터는 RAM 에서 할당된다. 이 데이터는 주로 변수, 배열, 구조체 등의 형태로 표현됨. -> 주소 매핑: 각 변수나 데이터 구조는  RAM 에서 고유한 주소를 가지게 된다. 이 주소를 통해 프로그램은 해당 데이터를 읽거나 쓸 수 있음. -> CPU 는 RAM 에서 데이터를 읽어와 연산을 수행하고, 프로그램이 종료되거나 데이터가 더이상 필요하지 않을 때까지 RAM 에 저장된 데이터는 프로그램에 의해 계속해서 사용된다. 전원종료시 데이터는 소실된다. RAM 은 휘발성 메모리임으로 전원이 종료되면 저장된 데이터가 소멸된다. 컴퓨터 재부팅 및 종료될 때 발생한다.
 ```swift
 //답변
 ```
@@ -28,7 +30,9 @@
 <summary>주어진 숫자의 제곱을 반환하는 함수를 작성하십시오.</summary>
 
 ```swift
-//답변
+func operateSquare(_ number: Double) -> Double {
+    return number * numer
+}
 ```
 </details>
 
@@ -73,7 +77,9 @@
 <summary>튜플을 입력으로 받아 두 요소의 합을 반환하는 함수를 만듭니다.</summary>
 
 ```swift
-//답변
+func operateTuples(_ inputTuples: (Int, Int)) -> Int {
+    return inputTuples.0 + inputTuples.1
+}
 ```
 </details>
 
@@ -82,7 +88,16 @@
 <summary>주어진 숫자의 팩토리얼을 계산하는 재귀 함수를 작성하십시오.</summary>
 
 ```swift
-//답변
+func isFactorial(_ num: Int) -> Int {
+    let factorialNumber = num
+    var result = 1
+    for i in 1...factorialNumber {
+        result *= i
+    }
+    return result
+}
+
+print(isFactorial(5))
 ```
 </details>
 
@@ -152,9 +167,13 @@
 
 <details>
 <summary>원시 값으로 열거형을 구현하고 열거형 케이스의 원시 값에 접근하는 방법을 설명합니다.</summary>
-
+- 원시값: 매칭되는 기본값(정수,문자열) 정해서 활용할 수 있다. 원시값을 입력안하면 자동으로 0, 1, 2 가 설정된다. 아래 1을 처음으로 썼음으로 1부터 시작해서 7까지 원시값 호출 가능하고 호출은 아래 변수 `choiceDay`처럼 쓰고 열거형 소괄호 rawValue 안에 정수형 숫자를 입력한다.
 ```swift
-//답변
+enum Weekdays: Int {
+    case mon = 1, tues, wed, thu, fri, sat, sun
+}
+
+var choiceDay = Weekdays(rawValue: 2)
 ```
 </details>
 
