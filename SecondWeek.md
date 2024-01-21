@@ -52,7 +52,17 @@ func calculateSquare(_ number: Double) -> Double {
 <summary>이름은 같지만 매개변수 유형이 다른 두 개의 함수를 만들어 함수 오버로딩을 구현하십시오.</summary>
 
 ```swift
-//답변
+
+func displayValue(value: Int) {
+    print("Integer value:", value)
+}
+
+func displayValue(value: String) {
+    print("String value:", value)
+}
+
+displayValue(value: "Swift")
+displayValue(value: 2)
 ```
 </details>
 
@@ -148,7 +158,15 @@ print("π: \(num)")
 <summary>옵셔널 변수를 생성하고 옵셔널 바인딩을 사용하여 해당 값을 안전하게 언래핑하는 함수를 작성합니다.</summary>
 
 ```swift
-//답변
+var url: String?
+
+func getUrlAddress(_ url: String?) {
+    if let urlString = url {
+        print(urlString)
+    }
+}
+
+getUrlAddress("https://www.developer.apple.com")
 ```
 </details>
 
@@ -157,7 +175,17 @@ print("π: \(num)")
 <summary>옵셔널 정수(Int?)를 받아 2를 곱한 수(두배)를 반환하거나 입력이 nil인 경우 기본값을 반환하는 함수를 작성합니다.</summary>
 
 ```swift
-//답변
+func checkEvenOrZero(num: Int?) -> Int {
+    if let unwrappedNumber = num {
+        return unwrappedNumber * 2
+    } else {
+        return 0
+    }
+}
+// nil 인 경우
+checkEvenOrZero(num: nil)
+// 정수형 타입 숫자값이 있는 경우
+checkEvenOrZero(num: 10)
 ```
 </details>
 
@@ -166,7 +194,56 @@ print("π: \(num)")
 <summary>정수 배열을 만들고 요소를 추가하고, 요소를 제거하고, 특정 인덱스에 있는 요소에 액세스하는 방법을 보여줍니다.</summary>
 
 ```swift
-//답변
+// MARK: - 배열 더하기
+var integerArray = [1, 2, 3, 4, 5, 8]
+
+integerArray.append(10)
+integerArray += [10, 8]
+print(integerArray)
+// "[1, 2, 3, 4, 5, 8, 10, 10, 8]\n"
+integerArray.sort()
+print(integerArray)
+// [1, 2, 3, 4, 5, 8, 8, 10, 10]
+// MARK: -  특정 인덱스에 있는 요소에 액세스
+
+//let accessIdx = 2
+let accessIdx = 10
+if accessIdx < integerArray.count {
+    let elementAtIdx = integerArray[accessIdx]
+    print("Element at index \(accessIdx): \(elementAtIdx)")
+} else {
+    print("index \(accessIdx) is out of range.")
+}
+// Element at index 2: 3
+// index 10 is out of range.
+
+// MARK: - 배열 요소 혹은 인덱스 제거
+let idxToRemove = 8
+// 요소 접근해서 지우기
+if let numToRemove = integerArray.firstIndex(of: idxToRemove) {
+    integerArray.remove(at: numToRemove)
+    print("removed element: \(idxToRemove).")
+    print("Update Array: \(integerArray)")
+} else {
+    print("Element \(idxToRemove) not found in the array.")
+}
+//removed element: 8.
+
+
+// 인덱스 접근해서 지우기
+
+let indexToRemove = 7
+
+if indexToRemove < integerArray.count {
+    let removedElement = integerArray.remove(at: indexToRemove)
+    print("Removed element \(removedElement) at index \(indexToRemove). Updated Array: \(integerArray)")
+} else {
+    print("Index \(indexToRemove) is out of bounds.")
+}
+
+
+//Update Array: [1, 2, 3, 4, 5, 8, 10, 10]
+//Removed element 10 at index 7. Updated Array: [1, 2, 3, 4, 5, 8, 10]
 ```
 </details>
 
@@ -175,7 +252,17 @@ print("π: \(num)")
 <summary>문자열 배열을 가져와 문자열(String)을 키로, 길이를 값으로 사용하여 딕셔너리를 반환하는 함수를 구현합니다.</summary>
 
 ```swift
-//답변
+func getStrDictionary(strings: [String]) -> [String: Int] {
+    var resultDic = [String: Int]()
+    for str in strings {
+        let length = str.count
+        resultDic[str] = length
+    }
+    return resultDic
+}
+let stringArray = ["uikit", "swiftui", "rxswift", "combine"]
+print(createDictionaryFromStrings(stringArray))
+// ["rxswift": 7, "swiftui": 7, "uikit": 5, "combine": 7]
 ```
 </details>
 
