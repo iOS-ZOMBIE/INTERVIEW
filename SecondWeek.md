@@ -21,9 +21,12 @@ func sumTwoNumbers(_ num1: Int, _ num2: Int) -> Int {
 <summary>데이터는 RAM에 어떻게 저장됩니까?</summary>
 
 ```swift
-/* 
-프로그램이 실행되면 해당 프로그램이 RAM 에 로드되며 프로그램은 코드와 데이터로 구성되어 있음. -> 프로그램이 실행되는 동안 필요한 데이터는 RAM 에서 할당된다. 이 데이터는 주로 변수, 배열, 구조체 등의 형태로 표현됨. -> 주소 매핑: 각 변수나 데이터 구조는  RAM 에서 고유한 주소를 가지게 된다. 이 주소를 통해 프로그램은 해당 데이터를 읽거나 쓸 수 있음. -> CPU 는 RAM 에서 데이터를 읽어와 연산을 수행하고, 프로그램이 종료되거나 데이터가 더이상 필요하지 않을 때까지 RAM 에 저장된 데이터는 프로그램에 의해 계속해서 사용된다. 전원종료시 데이터는 소실된다. RAM 은 휘발성 메모리임으로 전원이 종료되면 저장된 데이터가 소멸된다. 컴퓨터 재부팅 및 종료될 때 발생한다.
-*/
+
+// 프로그램이 실행되면 해당 프로그램이 RAM 에 로드되며 프로그램은 코드와 데이터로 구성되어 있음. 
+// -> 프로그램이 실행되는 동안 필요한 데이터는 RAM 에서 할당된다. 이 데이터는 주로 변수, 배열, 구조체 등의 형태로 표현됨. 
+// -> 주소 매핑: 각 변수나 데이터 구조는  RAM 에서 고유한 주소를 가지게 된다. 이 주소를 통해 프로그램은 해당 데이터를 읽거나 쓸 수 있음. 
+// -> CPU 는 RAM 에서 데이터를 읽어와 연산을 수행하고, 프로그램이 종료되거나 데이터가 더이상 필요하지 않을 때까지 RAM 에 저장된 데이터는 프로그램에 의해 계속해서 사용된다. 
+// 전원종료시 데이터는 소실된다. RAM 은 휘발성 메모리임으로 전원이 종료되면 저장된 데이터가 소멸된다. 컴퓨터 재부팅 및 종료될 때 발생한다.
 ```
 </details>
 
@@ -43,7 +46,33 @@ func calculateSquare(_ number: Double) -> Double {
 <summary>Swift에서 지역 범위와 전역 범위의 차이점을 설명하십시오.</summary>
 
 ```swift
-//답변
+// MARK: 선언된 위치 내 유효한 범위 - 지역범위 
+func executeFunction() {
+    var localValue = 42
+    print(localValue)
+}
+
+localValue = 2
+// Cannot find 'localValue' in scope
+
+// MARK: 프로그램 전체에서 유효한 범위 어느 블록이나 함수에 가져다 사용 가능
+let aplKey = "blahblah"
+let movieURL = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(apiKey)&targetDt=20240101"
+
+let structUrl = URL(string: movieURL)!
+let session = URLSession.shared
+
+session.dataTask(with: structUrl) { data, response, error in
+    if error != nil {
+        print(error!.localizedDescription)
+        return
+    }
+    
+    if let safeData = data {
+        let str = String(decoding: safeData, as: UTF8.self)
+        print(str)
+    }
+}.resume()
 ```
 </details>
 
@@ -271,7 +300,13 @@ print(createDictionaryFromStrings(stringArray))
 <summary>정수 집합을 받아서 짝수만 포함하는 집합을 반환하는 함수를 작성하세요.</summary>
 
 ```swift
-//답변
+func filterEvenNumbers(from even: Set<Int>) -> Set<Int> {
+    let filterNums = even.filter { $0 % 2 == 0 }
+    return Set(filterNums)
+}
+
+print(filterEvenNumbers(from: [1, 2, 3, 5, 6, 8, 11, 12]))
+// [8, 6, 2, 12]
 ```
 </details>
 
@@ -280,7 +315,27 @@ print(createDictionaryFromStrings(stringArray))
 <summary>연관 값이 있는 열거형을 만들고 switch 문에서 사용하는 예제를 작성하세요.</summary>
 
 ```swift
-//답변
+enum Electronics {
+    case iphone6(version: Double)
+    case iphone11(version: Double)
+    case iphone13(version: Double)
+}
+
+var deviceDescription = ""
+
+let mobile = Electronics.iphone13(version: 16.4)
+
+switch mobile {
+case .iphone6(let version):
+    deviceDescription = "iPhone 6 with iOS \(version)"
+case .iphone11(let version):
+    deviceDescription = "iPhone 11 with iOS \(version)"
+case .iphone13(let version):
+    deviceDescription = "iPhone 13 with iOS \(version)"
+}
+
+print(deviceDescription)
+//iPhone 13 with iOS 16.4
 ```
 </details>
 
@@ -304,7 +359,20 @@ var choiceDay = Weekdays(rawValue: 2)
 <summary>옵셔널 정수(Int?)를 취하고 switch 문에서 옵셔널 패턴을 사용하여 nil인 경우와 nil이 아닌 경우를 모두 처리하는 함수를 작성하십시오.</summary>
 
 ```swift
-//답변
+func processOptionalInteger(_ optionalInteger: Int?) {
+    switch optionalInteger {
+    case nil:
+        print("입력된 값은 nil입니다.")
+    case let someValue?:
+        print("입력된 값은 \(someValue)입니다.")
+    }
+}
+
+// 예제 사용
+processOptionalInteger(nil)
+processOptionalInteger(42)
+
+
 ```
 </details>
 
@@ -313,7 +381,9 @@ var choiceDay = Weekdays(rawValue: 2)
 <summary>열거형에서 unknown 키워드의 목적을 설명하십시오.</summary>
 
 ```swift
-//답변
+// unknown 이라는 키워는 Swift 에서 미리 정의된 값을 가지는 
+// 열거형을 선언해 그 외의  값에 대한 처리를 unknow 또는 default 에서 처리
+// 모든 열거형의 케이스를 다루지 않았다고 경고로 알려주어 개발자의 실수 가능성을 컴파일 시점에 알려줌
 ```
 </details>
 
