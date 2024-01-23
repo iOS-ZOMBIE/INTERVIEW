@@ -153,15 +153,18 @@ func calculateTuples(_ inputTuples: (Int, Int)) -> Int {
 
 ```swift
 func isFactorial(_ num: Int) -> Int {
-    let factorialNumber = num
-    var result = 1
-    for i in 1...factorialNumber {
-        result *= i
-    }
-    return result
+    guard num > 1 else { return 1 }
+    return num * isFactorial(num-1)
 }
+print(isFactorial(4))
+/*
+factorial(5) = 5 * factorial(4)
+            = 5 * (4 * factorial(3))
+            = 5 * (4 * (3 * factorial(2)))
+            = 5 * (4 * (3 * (2 * factorial(1))))
+            = 5 * (4 * (3 * (2 * 1)))
 
-print(isFactorial(5))
+*/
 ```
 </details>
 
